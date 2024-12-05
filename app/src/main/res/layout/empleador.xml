@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@drawable/gradient">
+
+    <!-- Header -->
+    <TextView
+        android:id="@+id/header"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#0B5ED7"
+        android:padding="16dp"
+        android:text="Formulario para Empleadores"
+        android:textColor="@color/white"
+        android:textSize="20sp"
+        android:gravity="center"
+        android:fontFamily="sans-serif-medium" />
+
+    <!-- Scrollable Form -->
+    <ScrollView
+        android:id="@+id/scrollView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/header"
+        android:layout_above="@id/footer"
+        android:padding="16dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <!-- Nombre de la Empresa -->
+            <TextView
+                android:textColor="#000000"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Nombre de la Empresa"
+                android:textSize="16sp"
+                android:fontFamily="sans-serif-medium" />
+
+            <EditText
+                android:id="@+id/companyName"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:backgroundTint="#0C40A0"
+                android:hint="Nombre de tu empresa"
+                android:inputType="text"
+                android:padding="12dp" />
+
+            <!-- Puesto -->
+            <TextView
+                android:textColor="#000000"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Puesto"
+                android:textSize="16sp"
+                android:layout_marginTop="16dp"
+                android:fontFamily="sans-serif-medium" />
+
+            <EditText
+                android:id="@+id/jobTitle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:backgroundTint="#151F5D"
+                android:hint="Título del puesto"
+                android:inputType="text"
+                android:padding="12dp" />
+
+            <!-- Salario Estimado -->
+            <TextView
+                android:textColor="#000000"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Salario Estimado"
+                android:textSize="16sp"
+                android:layout_marginTop="16dp"
+                android:fontFamily="sans-serif-medium" />
+
+            <EditText
+                android:id="@+id/estimatedSalary"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:backgroundTint="#19378A"
+                android:hint="Ejemplo: 30000"
+                android:inputType="number"
+                android:padding="12dp" />
+
+            <!-- Descripción -->
+            <TextView
+                android:textColor="#000000"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Descripción"
+                android:textSize="16sp"
+                android:layout_marginTop="16dp"
+                android:fontFamily="sans-serif-medium" />
+
+            <EditText
+                android:id="@+id/description"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:backgroundTint="#3200C7"
+                android:hint="Describe el puesto"
+                android:inputType="textMultiLine"
+                android:padding="12dp"
+                android:textColor="#2E2A2A" />
+
+            <!-- Botón de publicar oferta -->
+            <Button
+                android:id="@+id/submitButton"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="24dp"
+                android:backgroundTint="#0B5ED7"
+                android:padding="12dp"
+                android:text="Publicar Oferta"
+                android:textColor="@color/white" />
+        </LinearLayout>
+    </ScrollView>
+
+    <!-- Footer -->
+    <TextView
+        android:id="@+id/footer"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:background="#0B5ED7"
+        android:fontFamily="sans-serif-light"
+        android:gravity="center"
+        android:padding="16dp"
+        android:text="© 2024 Formulario para Empleadores"
+        android:textColor="@color/white"
+        android:textSize="14sp" />
+</RelativeLayout>

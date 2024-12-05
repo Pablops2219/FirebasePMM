@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">Firebase</string>
+    <string-array name="position_options">
+        <item>Selecciona una opción</item>
+        <item>Desarrollador</item>
+        <item>Diseñador</item>
+        <item>Gerente</item>
+        <item>Otra</item>
+    </string-array>
+</resources>

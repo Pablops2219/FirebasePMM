@@ -1,0 +1,157 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@drawable/gradient">
+
+    <!-- Header -->
+    <TextView
+        android:id="@+id/header"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#0B5ED7"
+        android:padding="16dp"
+        android:text="Formulario de Solicitantes"
+        android:textColor="@color/white"
+        android:textSize="20sp"
+        android:gravity="center"
+        android:fontFamily="sans-serif-medium" />
+
+    <!-- Scrollable Form -->
+    <ScrollView
+        android:id="@+id/scrollView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/header"
+        android:layout_above="@id/footer"
+        android:padding="16dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <!-- Nombre -->
+            <TextView
+                android:textColor="#000000"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Nombre"
+                android:textSize="16sp"
+                android:fontFamily="sans-serif-medium" />
+
+            <EditText
+                android:id="@+id/firstName"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:backgroundTint="#0C40A0"
+                android:hint="Tu nombre"
+                android:inputType="text"
+                android:padding="12dp" />
+
+            <!-- Apellido -->
+            <TextView
+                android:textColor="#000000"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Apellido"
+                android:textSize="16sp"
+                android:layout_marginTop="16dp"
+                android:fontFamily="sans-serif-medium" />
+
+            <EditText
+                android:id="@+id/lastName"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:backgroundTint="#151F5D"
+                android:hint="Tu apellido"
+                android:inputType="text"
+                android:padding="12dp"
+                android:textColorLink="#000000" />
+
+            <!-- Posición -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:fontFamily="sans-serif-medium"
+                android:text="Posición a la que aplicas"
+                android:textColor="#000000"
+                android:textSize="16sp" />
+
+            <Spinner
+                android:id="@+id/position"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:entries="@array/position_options"
+                android:backgroundTint="#0B5ED7"
+                android:padding="12dp" />
+
+            <!-- Número de contacto -->
+            <TextView
+                android:textColor="#000000"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Número de contacto"
+                android:textSize="16sp"
+                android:layout_marginTop="16dp"
+                android:fontFamily="sans-serif-medium" />
+
+            <EditText
+                android:id="@+id/contactNumber"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:backgroundTint="#19378A"
+                android:hint="Ejemplo: +34 123 456 789"
+                android:inputType="phone"
+                android:padding="12dp" />
+
+            <!-- Habilidades -->
+            <TextView
+                android:textColor="#000000"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Habilidades"
+                android:textSize="16sp"
+                android:layout_marginTop="16dp"
+                android:fontFamily="sans-serif-medium" />
+
+            <EditText
+                android:id="@+id/skills"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:backgroundTint="#3200C7"
+                android:hint="Ejemplo: Programación, Diseño"
+                android:inputType="text"
+                android:padding="12dp"
+                android:textColor="#2E2A2A"
+                android:textColorLink="#624E4E" />
+
+            <!-- Botón de enviar -->
+            <Button
+                android:id="@+id/submitButton"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="24dp"
+                android:backgroundTint="#198754"
+                android:padding="12dp"
+                android:text="Enviar Solicitud"
+                android:textColor="@color/white" />
+        </LinearLayout>
+    </ScrollView>
+
+    <!-- Footer -->
+    <TextView
+        android:id="@+id/footer"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:background="#0B5ED7"
+        android:fontFamily="sans-serif-light"
+        android:gravity="center"
+        android:padding="16dp"
+        android:text="© 2024 Formulario de Solicitantes"
+        android:textColor="@color/white"
+        android:textSize="14sp" />
+</RelativeLayout>
